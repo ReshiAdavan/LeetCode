@@ -3,7 +3,7 @@ class Solution(object):
         cols, upDiag, downDiag = set(), set(), set()
         NQueensBoard, board = [], [["."] * n for i in range(n)]
 
-        def backtrack(r):
+        def DFS(r):
             if r == n:
                 b = ["".join(row) for row in board]
                 NQueensBoard.append(b)
@@ -18,14 +18,14 @@ class Solution(object):
                 downDiag.add(r - c)
                 board[r][c] = "Q"
 
-                backtrack(r + 1)
+                DFS(r + 1)
 
                 cols.remove(c)
                 upDiag.remove(r + c)
                 downDiag.remove(r - c)
                 board[r][c] = "."
 
-        backtrack(0)
+        DFS(0)
         return NQueensBoard
 
 # Beats 69.48% python submissions in runtime
