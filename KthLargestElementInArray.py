@@ -1,5 +1,3 @@
-import heapq  # Import only necessary for syntatical purposes and not for LC submissions
-
 # Solution 1
 class Solution(object):
     def findKthLargest(self, nums, k):
@@ -31,4 +29,4 @@ class Solution(object):
         return nums[0]
 
 # Beats 29.27% python submissions in runtime
-# Beats 37.89% python submissions in memory usage  
+# Beats 37.89% python submissions in memory usage

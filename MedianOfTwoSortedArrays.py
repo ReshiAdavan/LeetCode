@@ -7,4 +7,4 @@ class Solution(object):
 
 ## Lazy Approach
 # Beats 71.38% python submissions in runtime
-# Beats 74.05% python submissions in memory usage  
+# Beats 74.05% python submissions in memory usage

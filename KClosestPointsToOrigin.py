@@ -1,5 +1,3 @@
-import heapq  # Import only necessary for syntatical purposes and not for LC submissions
-
 class Solution(object):
     def kClosest(self, points, k):
         p = []

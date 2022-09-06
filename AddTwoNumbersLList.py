@@ -22,8 +22,4 @@ class Solution(object):
         return sentinelNode.next
 
 # Beats 61.44% python submissions in runtime
-# Beats 6.29% python submissions in memory usage  
-
-                
-            
-        
+# Beats 6.29% python submissions in memory usage                

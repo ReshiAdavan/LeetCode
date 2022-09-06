@@ -24,4 +24,4 @@ class Solution(object):
         return resultList
 
 # Beats 96.15% python submissions in runtime
-# Beats 54.07% python submissions in memory usage 
+# Beats 54.07% python submissions in memory usage

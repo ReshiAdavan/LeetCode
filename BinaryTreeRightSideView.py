@@ -25,4 +25,3 @@ class Solution(object):
 
 # Beats 99.39% python submissions in runtime
 # Beats 25.04% python submissions in memory usage  
-        

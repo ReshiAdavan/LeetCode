@@ -29,5 +29,4 @@ class Solution(object):
         return islands
 
 # Beats 99.09% python submissions in runtime
-# Beats 93.60% python submissions in memory usage  
-            
+# Beats 93.60% python submissions in memory usage

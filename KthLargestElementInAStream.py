@@ -1,5 +1,3 @@
-import heapq  # Import only necessary for syntatical purposes and not for LC submissions
-
 class KthLargest(object):
     def __init__(self, k, nums):
         self.heap, self.k = nums, k

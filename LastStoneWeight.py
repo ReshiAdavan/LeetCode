@@ -1,5 +1,3 @@
-import heapq  # Import only necessary for syntatical purposes and not for LC submissions
-
 class Solution(object):
     def lastStoneWeight(self, stones):
         if len(stones) == 1:
@@ -14,4 +12,4 @@ class Solution(object):
         return -1 * stones[0] if stones else 0
 
 # Beats 72.09% python submissions in runtime
-# Beats 77.19% python submissions in memory usage  
+# Beats 77.19% python submissions in memory usage
