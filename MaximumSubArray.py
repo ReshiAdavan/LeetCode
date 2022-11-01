@@ -12,8 +12,7 @@ class Solution(object):
         x = 0
         while x < length:
             localMax = max(nums[x], nums[x] + localMax)
-            if localMax > globalMax:
-                globalMax = localMax
+            globalMax = max(localMax, globalMax); 
             x += 1
         return globalMax
 
