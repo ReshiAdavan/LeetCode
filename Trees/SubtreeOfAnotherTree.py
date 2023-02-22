@@ -16,7 +16,7 @@ class Solution(object):
         if not root and not subRoot: 
             return True
         if root and subRoot and root.val == subRoot.val:
-		    return self.isSameTree(root.left, subRoot.left) and self.isSameTree(root.right, subRoot.right)
+            return self.isSameTree(root.left, subRoot.left) and self.isSameTree(root.right, subRoot.right)
         return False
 
 # Beats 86.95% python submissions in runtime
