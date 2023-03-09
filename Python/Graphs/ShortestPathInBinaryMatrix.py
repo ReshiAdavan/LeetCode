@@ -11,7 +11,7 @@ class Solution:
         while queue:
             row, col, length = queue.popleft()
             if row == n - 1 and col == n - 1:
-                return length   
+                return length
             if (min(row, col) < 0 or max(row, col) >= n or grid[row][col]):
                 continue
             for dr, dc in directions:
