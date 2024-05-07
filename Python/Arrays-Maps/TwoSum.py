@@ -8,4 +8,4 @@ class Solution(object):
             N[y] = x
 
 # Beats 97.86% python submissions in runtime
-# Beats 86.61% python submissions in memory usage  
+# Beats 86.61% python submissions in memory usage
