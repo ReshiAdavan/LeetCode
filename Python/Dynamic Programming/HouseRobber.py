@@ -12,3 +12,17 @@ class Solution(object):
 
 # Beats 77.06% python submissions in runtime
 # Beats 89.21% python submissions in memory usage
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if len(nums) == 1: return nums[0]
+        if len(nums) == 2: return max(nums[0], nums[1])
+        dp = [nums[0], max(nums[0], nums[1])]
+        i = 2
+        while i < len(nums):
+            dp.append(max(dp[i - 1], nums[i] + dp[i - 2]))
+            i += 1
+        return dp[-1]
+
+# Beats 99.50% python submissions in runtime
+# Beats 44.35% python submissions in memory usage
