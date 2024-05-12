@@ -23,3 +23,30 @@ class Solution(object):
 
 # Beats 49.70% python submissions in runtime
 # Beats 81.63% python submissions in memory usage
+
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        candidates.sort()
+        res = []
+
+        def dfs(cur, step, total):
+            if total == target:
+                res.append(cur.copy())
+                return
+            if total > target:
+                return
+
+            prev = -1
+            for i in range(step, len(candidates)):
+                if candidates[i] == prev:
+                    continue
+                cur.append(candidates[i])
+                dfs(cur, i + 1, total + candidates[i])
+                cur.pop()
+                prev = candidates[i]
+
+        dfs([], 0, 0)
+        return res
+
+# Beats 68.77% python submissions in runtime
+# Beats 34.97% python submissions in memory usage
