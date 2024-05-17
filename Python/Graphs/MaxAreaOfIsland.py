@@ -64,4 +64,25 @@ class Solution(object):
         return ans
                 
 # Beats 16.04% python submissions in runtime
-# Beats 21.64% python submissions in memory usage  
+# Beats 21.64% python submissions in memory usage
+
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        r, c = len(grid), len(grid[0])
+        v = set()
+        res = 0
+
+        def dfs(i, j):
+            if i < 0 or i >= r or j < 0 or j >= c or grid[i][j] == 0 or (i, j) in v:
+                return 0
+            v.add((i, j))
+            return (1 + dfs(i + 1, j) + dfs(i - 1, j) + dfs(i, j + 1) +dfs(i, j - 1))
+        
+        for i in range(r):
+            for j in range(c):
+                if (i, j) not in v and grid[i][j] == 1:
+                    res = max(res, dfs(i, j))
+        return res
+
+# Beats 95.84% of users with Python3 in runtime
+# Beats 23.71% of users with Python3 in memory
