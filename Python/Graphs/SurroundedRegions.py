@@ -1,5 +1,6 @@
 class Solution(object):
     def solve(self, board):
+        """Do not return anything, modify board in-place instead."""
         rows, cols = len(board), len(board[0])
 
         def DFS(r, c):
@@ -25,3 +26,35 @@ class Solution(object):
 
 # Beats 86.68% python submissions in runtime
 # Beats 68.16% python submissions in memory usage 
+
+class Solution:
+    def solve(self, board: List[List[str]]) -> None:
+        """Do not return anything, modify board in-place instead."""
+        ROWS, COLS = len(board), len(board[0])
+        v = set()
+        
+        def dfs(i, j):
+            if (i < 0 or i == ROWS or j < 0 or j == COLS 
+            or board[i][j] != "O" or (i, j) in v):
+                return
+            v.add((i, j))
+            dfs(i + 1, j)
+            dfs(i - 1, j)
+            dfs(i, j + 1)
+            dfs(i, j - 1)
+
+        for r in range(ROWS):
+            dfs(r, 0)
+            dfs(r, COLS - 1)
+
+        for c in range(COLS):
+            dfs(0, c)
+            dfs(ROWS - 1, c)
+
+        for i in range(ROWS):
+            for j in range(COLS):
+                if (i, j) not in v:
+                    board[i][j] = "X"
+
+# Beats 54.96% of users with Python3 in runtime
+# Beats 82.31% of users with Python3 in memory
