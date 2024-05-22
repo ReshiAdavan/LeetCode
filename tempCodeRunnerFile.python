@@ -1,0 +1,75 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+#
+# Complete the 'hunt_for_treasure' function below.
+#
+# The function is expected to return an INTEGER_ARRAY.
+# The function accepts 2D_STRING_ARRAY dungeon as parameter.
+#
+
+def hunt_for_treasure(dungeon):
+    ROWS, COLS = len(dungeon), len(dungeon[0])
+    res = []
+    v = set()
+    
+    def dfs(i, j, health, steps):
+        if dungeon[i][j] == 'T':
+            return [steps, health]
+        v.add((i, j))
+        
+        u, d, left, r = [float("inf"), health], [float("inf"), health], [float("inf"), health], [float("inf"), health]
+        print("U", u, "D", d, "L", left, "R", r)
+        
+        if i + 1 < ROWS and (i + 1, j) not in v and dungeon[i][j] != 'X' and health > 0:
+            if dungeon[i + 1][j] not in ['X', 'T', ''] and int(dungeon[i + 1][j]) in [0-9]:
+                u = dfs(i + 1, j, health - int(dungeon[i + 1][j]), steps + 1)
+            else:
+                u = dfs(i + 1, j, health, steps + 1)
+        if i - 1 >= 0 and (i - 1, j) not in v and dungeon[i][j] != 'X' and health > 0:
+            if dungeon[i - 1][j] not in ['X', 'T', ''] and int(dungeon[i - 1][j]) in [0-9]:
+                d = dfs(i - 1, j, health - int(dungeon[i - 1][j]), steps + 1)
+            else:
+                d = dfs(i - 1, j, health, steps + 1)
+        if j + 1 < COLS and (i, j + 1) not in v and dungeon[i][j] != 'X'  and health > 0:
+            if dungeon[i][j + 1] not in ['X', 'T', ''] and int(dungeon[i][j + 1]) in [0-9]:
+                left = dfs(i, j + 1, health - int(dungeon[i][j + 1]), steps + 1)
+            else:
+                left = dfs(i, j + 1, health, steps + 1)
+        if j - 1 >= 0 and (i, j - 1) not in v and dungeon[i][j] != 'X'  and health > 0:
+            if dungeon[i][j - 1] not in ['X', 'T', ''] and int(dungeon[i][j - 1]) in [0-9]:
+                r = dfs(i, j - 1, health - int(dungeon[i][j - 1]), steps + 1)
+            else:
+                r = dfs(i, j - 1, health, steps + 1)
+        print("U", u, "D", d, "L", left, "R", r)
+        return min(u, d, left, r)
+
+    res = dfs(0, 0, 5, 0)
+    print(res)
+    return res
+    
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    dungeon_rows = int(input().strip())
+    dungeon_columns = int(input().strip())
+
+    dungeon = []
+
+    for _ in range(dungeon_rows):
+        dungeon.append(input().rstrip().split())
+
+    result = hunt_for_treasure(dungeon)
+
+    fptr.write('\n'.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
