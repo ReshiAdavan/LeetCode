@@ -6,18 +6,22 @@ class Solution(object):
 
         v = set()
         def DFS(crs):
-            if crs in v: return False
-            if AList[crs] == []: return True
+            if crs in v: 
+                return False
+            if AList[crs] == []: 
+                return True
 
             v.add(crs)
             for pre in AList[crs]:
-                if not DFS(pre): return False
+                if not DFS(pre): 
+                    return False
             v.remove(crs)
             AList[crs] = []
             return True
 
         for c in range(numCourses):
-            if not DFS(c): return False
+            if not DFS(c): 
+                return False
         return True
 
 # Beats 71.79% python submissions in runtime
