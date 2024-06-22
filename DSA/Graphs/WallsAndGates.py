@@ -24,8 +24,8 @@ class Solution:
                     rooms[r][c - 1] = ctr
                     q.append((r, c - 1))
                 if c + 1 < COL and rooms[r][c + 1] == 2147483647:
-                    q.append((r, c + 1))
                     rooms[r][c + 1] = ctr
+                    q.append((r, c + 1))
             ctr += 1
 
 # Beats 100.00% of users in runtime
