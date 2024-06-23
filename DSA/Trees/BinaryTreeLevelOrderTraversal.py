@@ -28,4 +28,38 @@ class Solution(object):
         return ans
 
 # Beats 69.84% python submissions in runtime
-# Beats 66.47% python submissions in memory usage  
+# Beats 66.47% python submissions in memory usage
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        if not root: 
+            return []
+        if not root.left and not root.right:
+            return [[root.val]]
+
+        q = deque()
+        q.append(root)
+        res = []
+
+        while q:
+            level = []
+            for _ in range(len(q)):
+                node = q.popleft()
+                level.append(node.val)
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            res.append(level)
+        return res
+    
+# Beats 55.31% of users in runtime
+# Beats 78.27% of users in memory
+# Time Complexity: O(N)
+# Space Complexity: O(N)
