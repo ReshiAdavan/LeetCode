@@ -18,5 +18,7 @@ class Solution(object):
                 return trav.val
             trav = trav.right
 
-# Beats 85.03% python submissions in runtime
-# Beats 27.87% python submissions in memory usage  
+# Beats 87.31% python submissions in runtime
+# Beats 83.73% python submissions in memory usage
+# Time Complexity: O(k) 
+# Space Complexity: O(k)
