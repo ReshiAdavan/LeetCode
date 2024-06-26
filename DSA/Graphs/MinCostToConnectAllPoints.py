@@ -24,4 +24,4 @@ class Solution(object):
         return endCost
 
 # Beats 34.06% python submissions in runtime
-# Beats 13.92% python submissions in memory usage  
+# Beats 13.92% python submissions in memory usage
