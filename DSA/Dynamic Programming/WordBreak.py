@@ -1,5 +1,5 @@
 class Solution:
-    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+    def wordBreak(self, s: str, wordDict: list[str]) -> bool:
         S = len(s)
         dp = [False] * (S + 1)
         dp[-1] = True

@@ -1,5 +1,5 @@
 class Solution:
-    def maximumProfit(self, present: List[int], future: List[int], budget: int) -> int:
+    def maximumProfit(self, present: list[int], future: list[int], budget: int) -> int:
         dp = {}
         N = len(present)
 

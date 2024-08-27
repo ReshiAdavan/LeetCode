@@ -1,5 +1,5 @@
 class Solution:
-    def validTree(self, n: int, edges: List[List[int]]) -> bool:
+    def validTree(self, n: int, edges: list[list[int]]) -> bool:
         if not n: 
             return True
         adjList = {i : [] for i in range(n)}

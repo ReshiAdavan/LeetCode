@@ -30,7 +30,7 @@ class Solution(object):
 # Beats 35.79% python submissions in memory usage 
     
 class Solution:
-    def partition(self, s: str) -> List[List[str]]:
+    def partition(self, s: str) -> list[list[str]]:
         res = []
         cur = []
 

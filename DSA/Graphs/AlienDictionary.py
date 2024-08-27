@@ -1,5 +1,5 @@
 class Solution:
-    def alienOrder(self, words: List[str]) -> str:
+    def alienOrder(self, words: list[str]) -> str:
         adj = {char: set() for word in words for char in word}
 
         for i in range(len(words) - 1):

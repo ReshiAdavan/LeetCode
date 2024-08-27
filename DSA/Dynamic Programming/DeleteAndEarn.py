@@ -39,7 +39,7 @@ class Solution:
 ## Dynamic Programming
 
 class Solution:
-    def deleteAndEarn(self, nums: List[int]) -> int:
+    def deleteAndEarn(self, nums: list[int]) -> int:
         freqMap = {}
         for n in nums:
             freqMap[n] = freqMap.get(n, 0) + 1

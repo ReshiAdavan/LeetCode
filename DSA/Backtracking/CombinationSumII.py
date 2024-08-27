@@ -25,7 +25,7 @@ class Solution(object):
 # Beats 81.63% python submissions in memory usage
 
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: list[int], target: int) -> list[list[int]]:
         candidates.sort()
         res = []
 

@@ -1,5 +1,5 @@
 class Solution:
-    def numWays(self, words: List[str], target: str) -> int:
+    def numWays(self, words: list[str], target: str) -> int:
         MOD = 10**9  + 7
         T = len(target)
         W = len(words[0])

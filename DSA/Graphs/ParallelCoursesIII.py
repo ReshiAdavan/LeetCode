@@ -1,5 +1,5 @@
 class Solution:
-    def minimumTime(self, n: int, relations: List[List[int]], time: List[int]) -> int:
+    def minimumTime(self, n: int, relations: list[list[int]], time: list[int]) -> int:
         courseMap = {i: [] for i in range(1, n + 1)}
         for prevCourse, nextCourse in relations:
             courseMap[nextCourse].append(prevCourse)

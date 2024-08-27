@@ -3,7 +3,7 @@
 # Memory: O(n*m)
 
 class Solution:
-    def change(self, amount: int, coins: List[int]) -> int:
+    def change(self, amount: int, coins: list[int]) -> int:
 
         cache = {}
 
@@ -30,7 +30,7 @@ class Solution:
 # Memory: O(n*m)
 
 class Solution:
-    def change(self, amount: int, coins: List[int]) -> int:
+    def change(self, amount: int, coins: list[int]) -> int:
 
         dp = [[0] * (len(coins) + 1) for i in range(amount + 1)]
         dp[0] = [1] * (len(coins) + 1)
@@ -49,7 +49,7 @@ class Solution:
 # Memory: O(n) where n = amount
             
 class Solution:
-    def change(self, amount: int, coins: List[int]) -> int:
+    def change(self, amount: int, coins: list[int]) -> int:
 
         dp = [0] * (amount + 1)
         dp[0] = 1
