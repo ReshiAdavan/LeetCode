@@ -1,5 +1,5 @@
 class Solution:
-    def paintWalls(self, cost: List[int], time: List[int]) -> int:
+    def paintWalls(self, cost: list[int], time: list[int]) -> int:
         dp = {}
         
         def dfs(i, remain):

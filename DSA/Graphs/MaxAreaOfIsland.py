@@ -67,7 +67,7 @@ class Solution(object):
 # Beats 21.64% python submissions in memory usage
 
 class Solution:
-    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+    def maxAreaOfIsland(self, grid: list[list[int]]) -> int:
         r, c = len(grid), len(grid[0])
         v = set()
         res = 0

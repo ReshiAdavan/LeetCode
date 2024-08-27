@@ -1,5 +1,5 @@
 class Solution:
-    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+    def longestIncreasingPath(self, matrix: list[list[int]]) -> int:
         dp = [[0 for _ in range(len(matrix[0]))] for _ in range(len(matrix))]
 
         def dfs(i, j):

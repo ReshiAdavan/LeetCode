@@ -1,5 +1,5 @@
 class Solution:
-    def snakesAndLadders(self, board: List[List[int]]) -> int:
+    def snakesAndLadders(self, board: list[list[int]]) -> int:
         length = len(board)
 
         board.reverse()

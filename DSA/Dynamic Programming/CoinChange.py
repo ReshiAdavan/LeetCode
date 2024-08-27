@@ -1,5 +1,5 @@
 class Solution:
-    def coinChange(self, coins: List[int], amount: int) -> int:
+    def coinChange(self, coins: list[int], amount: int) -> int:
         dp = [0 for i in range(amount + 1)]
         if not amount: return dp[0]
         for i in range(1, amount + 1):

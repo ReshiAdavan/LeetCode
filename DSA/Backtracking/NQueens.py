@@ -32,7 +32,7 @@ class Solution(object):
 # Beats 60.30% python submissions in memory usage 
 
 class Solution:
-    def solveNQueens(self, n: int) -> List[List[str]]:
+    def solveNQueens(self, n: int) -> list[list[str]]:
         res = []
         cols, pDiag, nDiag = set(), set(), set()
         board = [["."] * n for _ in range(n)]

@@ -19,7 +19,7 @@ class Solution(object):
 # Beats 16.29% python submissions in memory usage
 
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+    def permute(self, nums: list[int]) -> list[list[int]]:
         res = []
 
         def dfs(step):

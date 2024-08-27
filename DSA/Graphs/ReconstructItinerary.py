@@ -1,5 +1,5 @@
 class Solution:
-    def findItinerary(self, tickets: List[List[str]]) -> List[str]:
+    def findItinerary(self, tickets: list[list[str]]) -> list[str]:
         graph = {src: [] for src, dst in tickets}
         res = []
 

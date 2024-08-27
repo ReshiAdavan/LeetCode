@@ -1,5 +1,5 @@
 class Solution:
-    def countSubarrays(self, nums: List[int], mink: int, maxK: int) -> int:
+    def countSubarrays(self, nums: list[int], mink: int, maxK: int) -> int:
         res = 0
         badIdx = leftIdx = rightIdx = -1
         for i, num in enumerate(nums) :

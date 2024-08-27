@@ -1,7 +1,7 @@
 # Solution 1: More time-effiicent BFS approach:
 
 class Solution:
-    def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
+    def shortestPathBinaryMatrix(self, grid: list[list[int]]) -> int:
         n = len(grid[0])
         if grid[0][0] or grid[n - 1][n - 1]:
             return -1
@@ -26,7 +26,7 @@ class Solution:
 # Solution 2: More space-effiicent BFS approach:
 
 class Solution:
-    def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
+    def shortestPathBinaryMatrix(self, grid: list[list[int]]) -> int:
         n = len(grid[0])
         if grid[0][0] or grid[n - 1][n - 1]:
             return -1

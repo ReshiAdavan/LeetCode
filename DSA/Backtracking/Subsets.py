@@ -19,7 +19,7 @@ class Solution(object):
 # Beats 70.43% python submissions in memory usage
 
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
+    def subsets(self, nums: list[int]) -> list[list[int]]:
         res = [] 
         subset = []
 

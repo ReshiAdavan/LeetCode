@@ -1,5 +1,5 @@
 class Solution:
-    def swimInWater(self, grid: List[List[int]]) -> int:
+    def swimInWater(self, grid: list[list[int]]) -> int:
         N = len(grid)
         visit = set((0, 0))
         minH = [[grid[0][0], 0, 0]]

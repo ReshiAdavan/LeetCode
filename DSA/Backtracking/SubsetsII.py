@@ -22,7 +22,7 @@ class Solution(object):
 # Beats 73.74% python submissions in memory usage
 
 class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+    def subsetsWithDup(self, nums: list[int]) -> list[list[int]]:
         res = []
         cur = []
         nums.sort()

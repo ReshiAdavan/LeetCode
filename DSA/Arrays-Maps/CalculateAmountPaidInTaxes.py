@@ -1,5 +1,5 @@
 class Solution:
-    def calculateTax(self, brackets: List[List[int]], income: int) -> float:
+    def calculateTax(self, brackets: list[list[int]], income: int) -> float:
         tax = prev = 0
         for upper, p in brackets:
             if income >= upper:

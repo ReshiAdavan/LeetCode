@@ -1,5 +1,5 @@
 class Solution:
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
         # Combine the two arrays into a single sorted array
         merged = sorted(nums1 + nums2)
         

@@ -29,7 +29,7 @@ class Solution(object):
 # Beats 47.69% python submissions in memory usage 
 
 class Solution:
-    def orangesRotting(self, grid: List[List[int]]) -> int:
+    def orangesRotting(self, grid: list[list[int]]) -> int:
         r, c = len(grid), len(grid[0])
         q = collections.deque()
         f = 0

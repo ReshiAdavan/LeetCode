@@ -1,5 +1,5 @@
 class Solution:
-    def openLock(self, deadends: List[str], target: str) -> int:
+    def openLock(self, deadends: list[str], target: str) -> int:
         if "0000" in deadends:
             return -1
 
