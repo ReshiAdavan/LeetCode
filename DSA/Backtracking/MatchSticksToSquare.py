@@ -25,6 +25,8 @@ class Solution:
             return False
             
         return backtrack(0)
-
+    
+# Time Complexity: O(4^N)
+# Space Complexity: O(4^N) 
 # Beats 72.84% of users with Python3 in runtime 
 # Beats 51.35% of users with Python3 in memory
