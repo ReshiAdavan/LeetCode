@@ -71,5 +71,5 @@ class Solution:
 
 # Time Complexity: O(R^2 * K)
 # Space Complexity: O(R)
-# Beats 12.47%of python users in runtime
-# Beats 88.82%  of python users in memory usage
+# Beats 12.47% of python users in runtime
+# Beats 88.82% of python users in memory usage
