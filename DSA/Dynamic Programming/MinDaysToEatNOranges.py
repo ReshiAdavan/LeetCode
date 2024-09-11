@@ -6,8 +6,8 @@ class Solution:
             if i in cache:
                 return cache[i]
             
-            consumeHalf = (i%2) + dfs(i // 2)
-            consumeTwoThirds = (i%3) + dfs(i // 3)
+            consumeHalf = (i % 2) + dfs(i // 2)
+            consumeTwoThirds = (i % 3) + dfs(i // 3)
             cache[i] = 1 + min(consumeHalf, consumeTwoThirds)
             return cache[i]
 
