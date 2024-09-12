@@ -17,7 +17,6 @@ class Solution:
 
         return dfs(0, n, 0)
 
-## Valid solution but gets a "MEMORY LIMIT EXCEEDED" on LeetCode
 # Time Complexity: O(len(group) * n * minProfit)
 # Space Complexity: O(len(group) * n * minProfit)
 # Beats 12.71% of python users in runtime
