@@ -20,4 +20,22 @@ class Solution(object):
         return True
 
 # Beats 91.81% python submissions in runtime
-# Beats 12.49% python submissions in memory usage  
+# Beats 12.49% python submissions in memory usage
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        bracketMap = {")": "(", "]": "[", "}": "{"}
+        stack = []
+        for ch in s:
+            # opening brackets
+            if ch not in bracketMap:
+                stack.append(ch)
+
+            # closing brackets
+            else:
+                if not stack:
+                    return False
+                prevCh = stack.pop()
+                if prevCh != bracketMap[ch]:
+                    return False
+        return True if len(stack) == 0 else False

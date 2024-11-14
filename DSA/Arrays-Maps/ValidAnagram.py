@@ -1,3 +1,5 @@
+from collections import Counter
+
 class Solution(object):
     def isAnagram(self, s, t):
         if len(t) != len(s):
@@ -12,3 +14,7 @@ class Solution(object):
     
 # Beats 62.39% python submissions in runtime
 # Beats 97.75% python submissions in memory usage  
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
