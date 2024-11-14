@@ -1,9 +1,15 @@
-class Solution(object):
-    def groupAnagrams(self, strs):
-        H = defaultdict(list)
-        for s in strs:
-            H[str(sorted(s))].append(s)
-        return H.values()
+from typing import List
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        table = {} # freqMap, str
 
-# Beats 47.82% python submissions in runtime
-# Beats 46.49% python submissions in memory usage  
+        for elem in strs:
+            sortedStr = "".join(sorted(elem))
+            if sortedStr not in table:
+                table[sortedStr] = []
+            table[sortedStr].append(elem)
+
+        return list(table.values())
+
+# TC: O(N*Klog(K))
+# SC: O(N*K)
