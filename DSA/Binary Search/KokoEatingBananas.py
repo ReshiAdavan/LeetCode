@@ -16,4 +16,30 @@ class Solution(object):
         return k 
 
 # Beats 97.23% python submissions in runtime
-# Beats 79.61% python submissions in memory usage  
+# Beats 79.61% python submissions in memory usage
+
+from typing import List
+import math
+
+class Solution:
+    def minEatingSpeed(self, piles: List[int], h: int) -> int:
+        if len(piles) == h:
+            return max(piles)
+        left = 1
+        right = max(piles)
+        k = 0
+
+        while left <= right:
+            middle = (left + right) // 2
+            time = 0
+            for pile in piles:
+                time += math.ceil((pile / middle))
+            if time <= h:
+                k = middle
+                right = middle - 1
+            else:
+                left = middle + 1
+        return k
+    
+# TC: O(nlog(max(piles)))
+# SC: O(1)
