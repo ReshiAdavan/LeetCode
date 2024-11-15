@@ -18,3 +18,50 @@ class Solution(object):
 
 # Beats 91.71% python submissions in runtime
 # Beats 72.13% python submissions in memory usage
+
+from typing import List
+
+## Recursive Memoization
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        cache = {}
+
+        def memo(start):
+            if start >= len(nums):
+                return 0
+
+            if start in cache:
+                return cache[start]
+
+            # include
+            A = nums[start] + memo(start + 1)
+
+            # exclude and start fresh
+            B = nums[start]
+
+            cache[start] = max(A, B)
+            return cache[start]
+
+        maxi = float('-inf')
+        for i in range(len(nums)):
+            maxi = max(maxi, memo(i))
+        return maxi
+
+# TC: O(N)
+# SC: O(N)
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        runningSum = 0
+        maxSubArrayRes = nums[0]
+
+        for n in nums:
+            if runningSum < 0:
+                runningSum = 0
+            runningSum += n
+            maxSubArrayRes = max(maxSubArrayRes, runningSum)
+
+        return maxSubArrayRes
+
+# TC: O(N)
+# SC: O(1)
