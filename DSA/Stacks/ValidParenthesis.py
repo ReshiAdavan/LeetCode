@@ -39,3 +39,6 @@ class Solution:
                 if prevCh != bracketMap[ch]:
                     return False
         return True if len(stack) == 0 else False
+
+# TC: O(n)
+# SC: O(1)
