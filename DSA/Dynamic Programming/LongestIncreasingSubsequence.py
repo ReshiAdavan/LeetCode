@@ -23,7 +23,7 @@ class Solution:
 
 ### Memory Limit Exceeded
 # Time Complexity: O(n^2)
-# Space Complexity: O(n)
+# Space Complexity: O(n^2)
 
 from typing import List
 
@@ -55,7 +55,7 @@ class Solution:
             pos = bisect_left(dp, num)
             if pos == len(dp):
                 dp.append(num)
-            else:
+            else:   
                 dp[pos] = num
             
         return len(dp)
