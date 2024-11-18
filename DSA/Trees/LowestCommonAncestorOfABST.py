@@ -1,9 +1,9 @@
 # Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
@@ -21,13 +21,6 @@ class Solution(object):
 # Beats 81.08% python submissions in runtime
 # Beats 51.82% python submissions in memory usage  
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         def trav(node):
@@ -39,7 +32,5 @@ class Solution:
                 return node
         return trav(root)
 
-# Beats 43.87% of users in runtime
-# Beats 70.13% of users in memory
 # Time Complexity: O(log(N))
-# Space Complexity: O(1)
+# Space Complexity: O(h)
