@@ -17,7 +17,7 @@ class Solution:
         if x % 2 == 0:
             return 1 + self.power(x // 2)
         else:
-            return 1 + self.power((3 * x) + 1)  
+            return 1 + self.power((3 * x) + 1)
 
 ## Heap + Recursiom
 # TC: O(n * p + n * logn + k * logn)
