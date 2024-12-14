@@ -20,7 +20,7 @@ class Leaderboard:
     def reset(self, playerId: int) -> None:
         del self.board[playerId]
 
-# TC: O(1), O(n + nlogk), O(1)
+# TC: O(1), O(nlogn), O(1)
 # SC: O(n)
 
 from collections import defaultdict
@@ -41,5 +41,5 @@ class Leaderboard:
     def reset(self, playerId: int) -> None:
         del self.board[playerId]
 
-# TC: O(1), O(nlogn + k), O(1)
+# TC: O(1), O(nlogn), O(1)
 # SC: O(n)
