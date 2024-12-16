@@ -1,8 +1,8 @@
 # Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.next = None
 
 # Solution 1
 class Solution(object):
@@ -13,7 +13,7 @@ class Solution(object):
         while head:
             if head in H: 
                 return True
-            H[head] = ListNode(head.val) 
+            H[head] = ListNode(head.val)
             head = head.next
         return False
     
