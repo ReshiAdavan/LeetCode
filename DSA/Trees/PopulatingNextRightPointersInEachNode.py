@@ -9,6 +9,7 @@ class Node:
 ## BFS
 
 from collections import deque
+from typing import Optional
 
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
