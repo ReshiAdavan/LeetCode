@@ -1,3 +1,5 @@
+from collections import deque
+
 class Solution:
     def snakesAndLadders(self, board: list[list[int]]) -> int:
         length = len(board)

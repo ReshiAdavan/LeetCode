@@ -1,3 +1,5 @@
+from collections import deque
+
 # Solution 1: More time-effiicent BFS approach:
 
 class Solution:
