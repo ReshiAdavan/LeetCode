@@ -53,5 +53,5 @@ class Solution:
             res.append([name] + sorted(emailGroups[i]))
         return res
     
-# TC: O(nlogn) -> m is # of emails total
+# TC: O(mlogm) -> m is # of emails total
 # SC: O(n) -> n is # of accounts
