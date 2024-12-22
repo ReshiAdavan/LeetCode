@@ -1,6 +1,6 @@
 class Solution:
     def findItinerary(self, tickets: list[list[str]]) -> list[str]:
-        graph = {src: [] for src, dst in tickets}
+        graph = {src: [] for src, _ in tickets}
         res = []
 
         for src, dst in tickets:

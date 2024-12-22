@@ -1,3 +1,6 @@
+from collections import heapq
+from math import sqrt
+
 class Solution(object):
     def kClosest(self, points, k):
         p = []

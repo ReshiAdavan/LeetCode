@@ -1,3 +1,5 @@
+from collections import heapq
+
 class Solution(object):
     def minCostConnectPoints(self, points):
         L = len(points)

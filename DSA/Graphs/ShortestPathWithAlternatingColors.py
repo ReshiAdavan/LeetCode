@@ -1,7 +1,9 @@
+from collections import defaultdict, deque
+
 class Solution:
     def shortestAlternatingPaths(self, n: int, redEdges: list[list[int]], blueEdges: list[list[int]]) -> list[int]:
-        redMap = collections.defaultdict(list)
-        blueMap = collections.defaultdict(list)
+        redMap = defaultdict(list)
+        blueMap = defaultdict(list)
 
         for src, dest in redEdges: redMap[src].append(dest)
         for src, dest in blueEdges: blueMap[src].append(dest)

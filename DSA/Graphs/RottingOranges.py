@@ -1,6 +1,8 @@
+from collections import deque
+
 class Solution(object):
     def orangesRotting(self, grid): 
-        q = collections.deque()
+        q = deque()
         fresh, time = 0, 0
 
         for r in range(len(grid)):
@@ -31,7 +33,7 @@ class Solution(object):
 class Solution:
     def orangesRotting(self, grid: list[list[int]]) -> int:
         r, c = len(grid), len(grid[0])
-        q = collections.deque()
+        q = deque()
         f = 0
         for i in range(r):
             for j in range(c):

@@ -1,3 +1,5 @@
+from collections import heapq
+
 class Solution(object):
     def networkDelayTime(self, times, n, k):
         edges = {i: [] for i in range(1, n + 1)}

@@ -1,3 +1,4 @@
+from collections import heapq
 class Solution:
     def swimInWater(self, grid: list[list[int]]) -> int:
         N = len(grid)

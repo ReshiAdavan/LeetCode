@@ -1,3 +1,5 @@
+from collections import deque
+
 class Solution:
     def openLock(self, deadends: list[str], target: str) -> int:
         if "0000" in deadends:

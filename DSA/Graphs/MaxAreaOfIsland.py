@@ -44,7 +44,6 @@ class Solution(object):
         rows, cols = len(grid), len(grid[0])
 
         def dfs(r, c):
-            maxi = 1
             a = 1
             if (
                 r not in range(rows)
