@@ -1,5 +1,5 @@
 from typing import List
-from collections import heapq
+from collections import heapq, deque
 
 class Solution:
     def findScore(self, nums: List[int]) -> int:
@@ -46,4 +46,32 @@ class Solution:
         return score
 
 # TC: O(nlogn)
+# SC: O(n)
+
+class Solution:
+    def findScore(self, nums: List[int]) -> int:
+        score = 0
+        n = len(nums)
+        q = deque()
+
+        for i in range(n):
+            if q and nums[i] >= q[-1]:
+                skip = False
+                while q:
+                    mini = q.pop()
+                    if not skip:
+                        score += mini
+                    skip = not skip
+            else:
+                q.append(nums[i])
+
+        skip = False
+        while q:
+            mini = q.pop()
+            if not skip:
+                score += mini
+            skip = not skip
+        return score
+
+# TC: O(n)
 # SC: O(n)
