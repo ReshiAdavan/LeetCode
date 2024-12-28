@@ -6,7 +6,7 @@ class Solution(object):
             if prices[x] < prices[c]:
                 c = x
             diff = max(diff, prices[x] - prices[c])
-            x += 1 
+            x += 1
         return diff
 
 # Beats 75.54% python submissions in runtime
