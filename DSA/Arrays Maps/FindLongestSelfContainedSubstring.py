@@ -40,7 +40,7 @@ class Solution:
             if c in intervals:
                 intervals[c][1] = i
             else:
-                intervals[c] = [i, i]  # [first_pos, last_pos]
+                intervals[c] = [i, i]
 
         n = len(s)
         res = 0
@@ -59,5 +59,5 @@ class Solution:
 
         return res if res else -1
 
-# TC: O(26*N)
+# TC: O(N + 26*N)
 # SC: O(N)
