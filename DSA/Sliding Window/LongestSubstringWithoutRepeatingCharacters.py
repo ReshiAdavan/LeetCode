@@ -33,3 +33,6 @@ class Solution:
             charWindow.add(s[right])
             maxi = max(maxi, len(charWindow))
         return maxi
+    
+# TC: O(N)
+# SC: O(N)

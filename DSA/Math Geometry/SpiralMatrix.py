@@ -26,3 +26,26 @@ class Solution(object):
 
 # Beats 83.57% python submissions in runtime
 # Beats 89.47% python submissions in memory usage
+
+from typing import List
+
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
+        ROWS, COLS = len(matrix), len(matrix[0])
+        r, c, dr, dc = 0, 0, 0, 1
+        res = []
+
+        for _ in range(ROWS * COLS):
+            res.append(matrix[r][c])
+            matrix[r][c] = "?"
+
+            if not 0 <= r + dr < ROWS or not 0 <= c + dc < COLS or matrix[r + dr][c + dc] == "?":
+                dr, dc = dc, -dr
+
+            r += dr
+            c += dc
+
+        return res
+
+# TC: O(N * M)
+# SC: O(N * M) 
