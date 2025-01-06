@@ -6,7 +6,7 @@ class Solution:
         for i in range(len(nums) - 1, -1, -1):
             if i + nums[i] >= goalPost:
                 goalPost = i
-        return True if not goalPost else False
+        return goalPost <= 0
 
 # TC: O(n)
 # SC: O(1)
