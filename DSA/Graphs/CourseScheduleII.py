@@ -32,4 +32,4 @@ class Solution:
 # Time Complexity: O(P + N)
 # Space Complexity: O(P + N)
 # Beats 70.62% of python users in runtime
-# Beats 15.96% of python users in memory usageRuntime
+# Beats 15.96% of python users in memory usage
