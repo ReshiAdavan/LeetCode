@@ -1,6 +1,7 @@
 ## Greedy
 ## Store and sort differences between B flights to A flights. Take B flights whem it saves you the most. Be greedy on minimizing loss
 
+from typing import List
 class Solution:
     def twoCitySchedCost(self, costs: List[List[int]]) -> int:
         costComparison = []
