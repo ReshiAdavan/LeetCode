@@ -2,7 +2,7 @@ class Solution(object):
     def findCheapestPrice(self, n, flights, src, dst, k):
         prices = [float("inf")] * n
         prices[src] = 0
-        for i in range(k + 1):
+        for _ in range(k + 1):
             tmpPrices = prices[:]
             for s, d, p in flights:
                 if prices[s] != float("inf"):

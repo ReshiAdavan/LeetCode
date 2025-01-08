@@ -1,3 +1,5 @@
+from collections import heapq
+
 class Solution(object):
     def lastStoneWeight(self, stones):
         if len(stones) == 1:
