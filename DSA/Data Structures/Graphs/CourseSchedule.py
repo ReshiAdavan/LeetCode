@@ -8,7 +8,7 @@ class Solution(object):
         def DFS(crs):
             if crs in v: 
                 return False
-            if AList[crs] == []: 
+            if AList[crs] == []:
                 return True
 
             v.add(crs)
