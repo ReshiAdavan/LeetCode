@@ -16,8 +16,8 @@ class Solution:
 # Since there can be k >= 2 integers involved in the product, we want to maximize k and 
 # break n into k 2's and 3's; 3's are preferred over 2's since 3^2 > 2^3
 
-# Arguably it depends on the exnpontiation operation with base 3 and that takes mlogn,
+# TC: O(1) / O(mlogn)
+# Arguably it depends on the exponentiation operation with base 3 and that takes mlogn,
 # where m represents number of bits in n, and m ~ n here
-# TC: O(1)
 
 # SC: O(1)
