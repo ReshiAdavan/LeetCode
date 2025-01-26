@@ -1,7 +1,5 @@
 from collections import deque
 
-# Solution 1: More time-effiicent BFS approach:
-
 class Solution:
     def shortestPathBinaryMatrix(self, grid: list[list[int]]) -> int:
         n = len(grid[0])
@@ -22,11 +20,9 @@ class Solution:
                     visited.add((row + dr, col + dc))
         return -1
     
-    # Beats 81.29% python submissions in runtime
-    # Beats 12.57% python submissions in memory usage
+# Beats 81.29% python submissions in runtime
+# Beats 12.57% python submissions in memory usage
     
-# Solution 2: More space-effiicent BFS approach:
-
 class Solution:
     def shortestPathBinaryMatrix(self, grid: list[list[int]]) -> int:
         n = len(grid[0])
@@ -45,5 +41,5 @@ class Solution:
                     visited.add((row + dr, col + dc))
         return -1
     
-    # Beats 50.21% python submissions in runtime
-    # Beats 26.71% python submissions in memory usage
+# Beats 50.21% python submissions in runtime
+# Beats 26.71% python submissions in memory usage
