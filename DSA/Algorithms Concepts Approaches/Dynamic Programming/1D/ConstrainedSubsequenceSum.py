@@ -24,3 +24,31 @@ class Solution:
 # TC: O(n * k)
 # SC: O(n)
 
+from collections import defaultdict, deque
+from typing import List
+
+class Solution:
+    def constrainedSubsetSum(self, nums: List[int], k: int) -> int:
+        dp = defaultdict(list)
+        q = deque()
+        result = max(nums)
+
+        for i in range(len(nums)):
+            while q and q[0] < i - k:
+                q.popleft()
+
+            cur = nums[i]
+            if q:
+                cur += max(0, dp[q[0]])
+            dp[i] = cur
+
+            while q and dp[q[-1]] <= dp[i]:
+                q.pop()
+            q.append(i)
+
+            result = max(result, dp[i])
+        return result
+
+# TC: O(n + k)
+# SC: O(n)
+
