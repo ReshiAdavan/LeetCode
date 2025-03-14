@@ -14,6 +14,9 @@ class Solution:
 # TC: O(N^2)
 # SC: O(1)
 
+# Congruence (mod k)
+# prefixSum[i] % k == prefixSum[j] % k => prefixSum[j] - prefixSum[i] % k => prefixSum[i:j] % k == 0
+
 class Solution:
     def checkSubarraySum(self, nums: List[int], k: int) -> bool:
         remainders = {0: -1}
