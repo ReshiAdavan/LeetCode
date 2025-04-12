@@ -21,7 +21,6 @@ class Solution:
 
 class Solution:
     def decodeString(self, s: str) -> str:
-        res = ""
         stack = []
         for i in range(len(s)):
             if s[i] == "]":
