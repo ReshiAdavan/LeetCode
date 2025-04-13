@@ -56,5 +56,5 @@ class Solution:
         return result
 
 ## Let n rep. len(replacements), m rep. len(text), and k rep. max length of a placeholder
-# TC: O(m + n² * k); m to process text, n^2 worst-case depth of graph per node, k worst-case length of substitute 
+# TC: O(m + n^2 * k); m to process text, n^2 worst-case depth of graph per node, k worst-case length of substitute 
 # SC: O(n * k); n for the cache, k for length of substitute
