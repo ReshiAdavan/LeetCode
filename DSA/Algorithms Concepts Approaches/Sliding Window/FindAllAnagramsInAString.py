@@ -37,5 +37,35 @@ class Solution:
             else: 
                 return res
             
-# Beats 76.17 %of users with Python3
-# Beats 99.01 %of users with Python3    
+# Beats 76.17% of users with Python3
+# Beats 99.01% of users with Python3
+
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        left, res, missing = 0, [], len(p)
+        neededChars = defaultdict(int)
+        for char in p:
+            neededChars[char] += 1
+
+        for right in range(len(s)):
+            # grow window
+            if neededChars[s[right]] > 0:
+                missing -= 1
+            neededChars[s[right]] -= 1
+
+            # shrink window
+            if right - left + 1 > len(p):
+                if neededChars[s[left]] >= 0:
+                    missing += 1
+                neededChars[s[left]] += 1
+                left += 1
+
+            # check if window is an anagram
+            if right - left + 1 == len(p):
+                if missing == 0:
+                    res.append(left)
+
+        return res
+
+# TC: O(p + s)
+# SC; O(p)
