@@ -32,3 +32,27 @@ class Solution:
 # TC: O(nlog(n))
 # SC: O(n)
 
+class Solution:
+    def jobScheduling(self, startTime: List[int], endTime: List[int], profit: List[int]) -> int:
+        data = sorted(zip(startTime, endTime, profit))
+        cache = {}
+
+        def memo(i):
+            if i >= len(data):
+                return 0
+            if i in cache:
+                return cache[i]
+
+            # take
+            j = bisect_left(data, (data[i][1], -float("inf"), -float("inf")), i + 1)
+            take = data[i][2] + memo(j)
+
+            # skip
+            skip = memo(i + 1)
+            cache[i] = max(take, skip)
+            return cache[i]
+
+        return memo(0)
+
+# TC: O(nlog(n))
+# SC: O(n)
